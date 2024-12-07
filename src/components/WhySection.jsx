@@ -11,8 +11,10 @@ const WhySection = () => {
   // const controls = useAnimation();
     const main = useRef();
 
+    
     useGSAP( () => {
       const heading = gsap.utils.toArray('.heading');
+
 
       heading.forEach( (head) => {
         gsap.to(head,{
@@ -115,11 +117,11 @@ const WhySection = () => {
     //   ))}
     // </div>
     <>
-      <div ref={main}  className="container md:h-[600px] my-20 font-extrabold  mx-auto flex flex-col justify-center items-center text-2xl md:text-5xl text-white md:space-y-16">
-        <h1 className="heading">Why you choose us?</h1>
-        <h1 className="heading">Customer-Centric Approach</h1>
-        <h1 className="heading">Unrivaled Experties</h1>
-        <h1 className="heading">End-to-End Support</h1>
+      <div ref={main}  className="container whySection md:h-[600px] my-20 font-extrabold  mx-auto flex flex-col justify-center items-center text-2xl md:text-5xl text-white md:space-y-16">
+        <h1 className="heading pt-20 md:pt-0">Why you choose us?</h1>
+        <h1 className="heading pt-20 md:pt-0 ">Customer-Centric Approach</h1>
+        <h1 className="heading pt-20 md:pt-0">Unrivaled Experties</h1>
+        <h1 className="heading pt-20 md:pt-0">End-to-End Support</h1>
       </div>
     </>
   );
