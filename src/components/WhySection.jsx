@@ -14,24 +14,29 @@ const WhySection = () => {
     
     useGSAP( () => {
       const heading = gsap.utils.toArray('.heading');
+      let time = gsap.timeline();
 
 
       heading.forEach( (head) => {
-        gsap.to(head,{
+        time.to(head,{
           opacity:0,
-          duration:2,
-          scale:0.5,
+          duration:1,
+          scale:0.2,
           color:"#000B17",
           scrollTrigger: {
             trigger : head,
             scrub : true,
-            start : "top 50%",
-            end: "bottom 20%",
+            start : "top 40%",
+            end: "bottom 30%",
             pin:true,
-            // markers:truez
+            // markers:true
           }
         })
+      
       })
+
+     
+     
 
     },{scope:main})
 
@@ -118,10 +123,10 @@ const WhySection = () => {
     // </div>
     <>
       <div ref={main}  className="container whySection md:h-[600px] my-20 font-extrabold  mx-auto flex flex-col justify-center items-center text-2xl md:text-5xl text-white md:space-y-16">
-        <h1 className="heading pt-20 md:pt-0">Why you choose us?</h1>
-        <h1 className="heading pt-20 md:pt-0 ">Customer-Centric Approach</h1>
-        <h1 className="heading pt-20 md:pt-0">Unrivaled Experties</h1>
-        <h1 className="heading pt-20 md:pt-0">End-to-End Support</h1>
+        <h1 className="heading my-5 md:py-0">Why you choose us?</h1>
+        <h1 className="heading my-5 md:py-0 ">Customer-Centric Approach</h1>
+        <h1 className="heading my-5 md:py-0">Unrivaled Experties</h1>
+        <h1 className="heading my-5 md:p-0">End-to-End Support</h1>
       </div>
     </>
   );
